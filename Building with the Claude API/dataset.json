@@ -1,14 +1,14 @@
 [
   {
-    "task": "Parse an AWS S3 bucket name from an S3 URI (s3://bucket-name/key/path) and extract just the bucket name",
+    "task": "Extract the AWS account ID from an ARN string like 'arn:aws:s3:::my-bucket/my-key'",
     "format": "regex"
   },
   {
-    "task": "Create a JSON CloudFormation template for an AWS Lambda function with basic execution role and environment variables",
+    "task": "Create a JSON configuration object for an AWS Lambda function that processes S3 events with a 30-second timeout and 256MB memory",
     "format": "json"
   },
   {
-    "task": "Write a Python function that takes an AWS IAM policy document (dict) and returns a list of all allowed actions",
+    "task": "Write a Python function that validates if an AWS S3 bucket name follows naming conventions (3-63 characters, lowercase letters, numbers, and hyphens only)",
     "format": "python"
   }
 ]
