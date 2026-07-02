@@ -1,14 +1,17 @@
 [
   {
-    "task": "Extract the AWS account ID from an ARN string like 'arn:aws:s3:::my-bucket/my-key'",
-    "format": "regex"
+    "task": "Parse an AWS S3 bucket name from an S3 URI (e.g., 's3://my-bucket-name/path/to/file.txt') and extract just the bucket name",
+    "format": "regex",
+    "solution_criteria": "The regex should correctly extract bucket names from various S3 URI formats, handling bucket names with hyphens and numbers, and should not match invalid characters or the path portion"
   },
   {
-    "task": "Create a JSON configuration object for an AWS Lambda function that processes S3 events with a 30-second timeout and 256MB memory",
-    "format": "json"
+    "task": "Create a JSON configuration object for an AWS Lambda function that specifies environment variables, timeout (300 seconds), memory size (512 MB), and a handler pointing to 'index.handler'",
+    "format": "json",
+    "solution_criteria": "The JSON should be valid, properly structured with all required fields, use correct key names matching AWS Lambda configuration standards, and have realistic values"
   },
   {
-    "task": "Write a Python function that validates if an AWS S3 bucket name follows naming conventions (3-63 characters, lowercase letters, numbers, and hyphens only)",
-    "format": "python"
+    "task": "Write a Python function that takes an AWS EC2 instance ID string (e.g., 'i-0123456789abcdef0') and validates whether it matches the proper AWS instance ID format",
+    "format": "python",
+    "solution_criteria": "The function should return True for valid instance IDs and False for invalid ones, handle edge cases like empty strings, and follow AWS instance ID naming conventions (i- prefix followed by 17 hexadecimal characters)"
   }
 ]
