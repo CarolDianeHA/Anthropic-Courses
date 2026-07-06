@@ -1,0 +1,24 @@
+[
+  {
+    "output": "# One-Day Marathon Race Day Preparation Meal Plan\n\nHere is a one-day meal plan for an athlete preparing for a marathon race with carbohydrate loading for optimal endurance performance:\n\n* **Calorie Target:** Approximately 3,200 calories\n* **Macronutrient Breakdown:** Protein (120g), Fat (80g), Carbs (480g)\n\n## Meal Plan:\n\n* **Breakfast (7:00 AM):** Oatmeal (100g dry weight) with honey (30g), banana (150g), and raisins (40g). Low-fat milk (240ml).\n  * Protein: 15g, Fat: 8g, Carbs: 110g\n\n* **Mid-Morning Snack (10:00 AM):** Rice cakes (60g) with jam (40g) and a glass of orange juice (250ml).\n  * Protein: 4g, Fat: 2g, Carbs: 80g\n\n* **Lunch (1:00 PM):** Grilled chicken breast (130g) with white rice (150g cooked) and steamed carrots (150g). Olive oil dressing (15ml).\n  * Protein: 38g, Fat: 12g, Carbs: 95g\n\n* **Afternoon Snack (3:30 PM):** Sports energy drink (500ml) with rice crackers (50g) and dried fruit mix (60g - raisins, cranberries, banana chips).\n  * Protein: 5g, Fat: 3g, Carbs: 105g\n\n* **Dinner (6:30 PM):** Baked lean beef (120g) with sweet potato (200g) and steamed green beans (150g). Light olive oil (10ml).\n  * Protein: 35g, Fat: 15g, Carbs: 60g\n\n* **Evening Snack (8:30 PM):** Bagel (100g) with honey (20g) and banana (120g).\n  * Protein: 8g, Fat: 2g, Carbs: 75g\n\n* **Pre-Sleep Hydration (30 minutes before bed):** Sports drink (250ml).\n  * Protein: 0g, Fat: 0g, Carbs: 15g\n\n---\n\n**Key Features:**\n- **Nut-free formula:** All nuts and tree nuts completely eliminated due to allergy\n- **High carbohydrate loading:** 480g carbs support maximum glycogen storage for marathon endurance\n- **Adequate protein:** 120g supports muscle recovery and maintenance\n- **Moderate fat:** 80g provides energy without digestive heaviness before race\n- **Hydration emphasis:** Multiple fluid intakes throughout the day\n- **Easy-to-digest foods:** Simple carbs and lean proteins minimize GI distress during the race\n\nThis meal plan prioritizes carbohydrate-rich whole grains, fruits, and lean proteins while maintaining safe hydration, all without any nuts or tree nuts.",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "180 cm",
+        "weight": "70 kg",
+        "goal": "Marathon race day preparation with carbohydrate loading for optimal endurance performance",
+        "restrictions": "No nuts or tree nuts due to allergy"
+      },
+      "solution_criteria": [
+        "Meal plan spans exactly 1 day with 4-5 meals/snacks",
+        "Total daily calories align with marathon pre-competition needs (approximately 2,800-3,200 kcal for 70kg athlete)",
+        "Carbohydrates comprise 60-70% of total calories to support glycogen loading",
+        "All meals and snacks are nut-free and safe for stated allergy",
+        "Plan includes specific timing recommendations for pre-race meals"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with a high-endurance athlete (marathon runner) requiring specific caloric intake and carbohydrate-loading strategies for pre-competition day"
+    },
+    "score": 7,
+    "reasoning": "The solution successfully meets all three mandatory requirements with clear presentation of daily calories, macronutrient breakdown, and detailed meals with portions and timing. The carbohydrate loading strategy is sound at 60% of total calories. The nut-free requirement is meticulously addressed. However, the secondary criteria specify 4-5 meals/snacks, and this plan includes 7 distinct eating occasions, which represents a material deviation from the stated requirement. The pre-sleep hydration addition, while well-intentioned, is not standard race-day preparation advice and may be counterproductive. Despite these issues, the core requirements are met and the plan is nutritionally sound for marathon preparation."
+  }
+]

@@ -1,17 +1,19 @@
 [
   {
-    "task": "Parse an AWS S3 bucket name from an S3 URI (e.g., 's3://my-bucket-name/path/to/file.txt') and extract just the bucket name",
-    "format": "regex",
-    "solution_criteria": "The regex should correctly extract bucket names from various S3 URI formats, handling bucket names with hyphens and numbers, and should not match invalid characters or the path portion"
-  },
-  {
-    "task": "Create a JSON configuration object for an AWS Lambda function that specifies environment variables, timeout (300 seconds), memory size (512 MB), and a handler pointing to 'index.handler'",
-    "format": "json",
-    "solution_criteria": "The JSON should be valid, properly structured with all required fields, use correct key names matching AWS Lambda configuration standards, and have realistic values"
-  },
-  {
-    "task": "Write a Python function that takes an AWS EC2 instance ID string (e.g., 'i-0123456789abcdef0') and validates whether it matches the proper AWS instance ID format",
-    "format": "python",
-    "solution_criteria": "The function should return True for valid instance IDs and False for invalid ones, handle edge cases like empty strings, and follow AWS instance ID naming conventions (i- prefix followed by 17 hexadecimal characters)"
+    "prompt_inputs": {
+      "height": "180 cm",
+      "weight": "70 kg",
+      "goal": "Marathon race day preparation with carbohydrate loading for optimal endurance performance",
+      "restrictions": "No nuts or tree nuts due to allergy"
+    },
+    "solution_criteria": [
+      "Meal plan spans exactly 1 day with 4-5 meals/snacks",
+      "Total daily calories align with marathon pre-competition needs (approximately 2,800-3,200 kcal for 70kg athlete)",
+      "Carbohydrates comprise 60-70% of total calories to support glycogen loading",
+      "All meals and snacks are nut-free and safe for stated allergy",
+      "Plan includes specific timing recommendations for pre-race meals"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a high-endurance athlete (marathon runner) requiring specific caloric intake and carbohydrate-loading strategies for pre-competition day"
   }
 ]
