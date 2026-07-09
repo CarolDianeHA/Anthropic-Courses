@@ -2,18 +2,16 @@
   {
     "prompt_inputs": {
       "height": "180 cm",
-      "weight": "70 kg",
-      "goal": "Marathon race day preparation with carbohydrate loading for optimal endurance performance",
-      "restrictions": "No nuts or tree nuts due to allergy"
+      "weight": "72 kg",
+      "goal": "Marathon competition day - carbohydrate loading with high caloric intake for endurance performance",
+      "restrictions": "None"
     },
     "solution_criteria": [
-      "Meal plan spans exactly 1 day with 4-5 meals/snacks",
-      "Total daily calories align with marathon pre-competition needs (approximately 2,800-3,200 kcal for 70kg athlete)",
-      "Carbohydrates comprise 60-70% of total calories to support glycogen loading",
-      "All meals and snacks are nut-free and safe for stated allergy",
-      "Plan includes specific timing recommendations for pre-race meals"
+      "Meal plan covers all meals for one full day with appropriate timing around competition",
+      "Total daily calories and carbohydrate intake align with high endurance athlete needs",
+      "Includes easily digestible, carbohydrate-rich foods suitable for competition day"
     ],
     "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-    "scenario": "Testing with a high-endurance athlete (marathon runner) requiring specific caloric intake and carbohydrate-loading strategies for pre-competition day"
+    "scenario": "Testing with a professional endurance athlete (marathon runner) who has high caloric needs and specific carbohydrate-loading requirements for competition day"
   }
 ]
