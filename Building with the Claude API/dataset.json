@@ -1,17 +1,52 @@
 [
   {
     "prompt_inputs": {
-      "height": "180 cm",
-      "weight": "72 kg",
-      "goal": "Marathon competition day - carbohydrate loading with high caloric intake for endurance performance",
-      "restrictions": "None"
+      "content": "This study examines neuroplasticity mechanisms in adolescent brain development, with particular emphasis on synaptic pruning and myelination processes. Synaptic pruning, the elimination of unused neural connections, occurs predominantly in the prefrontal cortex and is regulated by microglial activity and neurotrophic factors. Concurrently, myelination\u2014the insulation of axons by oligodendrocytes\u2014accelerates white matter development and enhances neural transmission speed. Both processes are influenced by environmental factors including sleep quality, physical exercise, and cognitive stimulation. Furthermore, adolescent neuroplasticity differs fundamentally from adult neuroplasticity in its heightened sensitivity to experience-dependent modification, though the underlying molecular mechanisms involve shared signaling pathways such as BDNF and calcium-dependent gene expression."
     },
     "solution_criteria": [
-      "Meal plan covers all meals for one full day with appropriate timing around competition",
-      "Total daily calories and carbohydrate intake align with high endurance athlete needs",
-      "Includes easily digestible, carbohydrate-rich foods suitable for competition day"
+      "Extracts main topics (neuroplasticity, synaptic pruning, myelination, environmental factors) as distinct entries",
+      "Distinguishes between hierarchical levels (e.g., neuroplasticity as main topic with synaptic pruning and myelination as related but separate topics)",
+      "Avoids excessive granularity by not listing every molecular detail (e.g., BDNF, microglial activity) as separate topics",
+      "Returns results as a valid JSON array of strings"
     ],
-    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-    "scenario": "Testing with a professional endurance athlete (marathon runner) who has high caloric needs and specific carbohydrate-loading requirements for competition day"
+    "task_description": "\"\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\"\n    ",
+    "scenario": "Testing with a passage containing overlapping and hierarchical topics to verify the prompt distinguishes between main topics and subtopics"
+  },
+  {
+    "prompt_inputs": {
+      "content": "This study examines the intersectionality of gender identity and socioeconomic mobility within post-industrial urban communities, drawing on narrative analysis of life histories collected over a fifteen-year longitudinal study. We argue that the neoliberal restructuring of labor markets has fundamentally altered the pathways through which individuals construct meaning around work and family obligations, particularly for women navigating precarious employment. Through thematic coding of participant interviews, we identify recurring tensions between aspirational narratives of self-determination and structural constraints imposed by childcare accessibility, wage stagnation, and the cultural valorization of emotional labor. Our findings suggest that agency itself becomes a contested terrain where individual choice intersects with systemic inequality, complicating traditional sociological frameworks that position structure and agency as discrete analytical categories."
+    },
+    "solution_criteria": [
+      "Captures major conceptual themes including gender identity, socioeconomic mobility, neoliberalism, and labor markets",
+      "Identifies methodological and analytical approaches such as narrative analysis and thematic coding",
+      "Recognizes nuanced social phenomena like precarious employment, emotional labor, and the structure-agency relationship",
+      "Avoids extracting overly specific details (e.g., 'fifteen-year longitudinal study') while capturing substantive topics"
+    ],
+    "task_description": "\"\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\"\n    ",
+    "scenario": "Testing with an abstract from a humanities/social science article that uses implicit and nuanced language to assess topic extraction accuracy in non-technical domains"
+  },
+  {
+    "prompt_inputs": {
+      "content": "Recent advances in CRISPR-Cas9 gene editing have revolutionized molecular biology research by enabling precise genomic modifications with unprecedented efficiency. The mechanism relies on RNA-guided nuclease activity to target specific DNA sequences, facilitating both insertional mutagenesis and homology-directed repair (HDR) pathways. Applications span from correcting monogenic disorders like cystic fibrosis to engineering CAR-T cells for immunotherapy. However, off-target effects and mosaicism remain critical challenges in translating these techniques to clinical practice. Epigenetic modifications through CRISPR interference (CRISPRi) and base editing represent emerging alternatives that circumvent permanent DNA alterations, offering greater therapeutic precision in treating polygenic diseases and cancer."
+    },
+    "solution_criteria": [
+      "Correctly identifies domain-specific technical topics (CRISPR-Cas9, HDR, CAR-T cells, epigenetic modifications) separately from general concepts (advances, challenges, applications)",
+      "Distinguishes acronyms and their expanded forms as single topics (e.g., CRISPR-Cas9, CRISPRi, HDR treated as technical topics, not separate from their descriptions)",
+      "Captures both established methodologies and emerging techniques as distinct topics"
+    ],
+    "task_description": "\"\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\"\n    ",
+    "scenario": "Testing with a passage containing multiple domain-specific jargon terms and acronyms to evaluate whether the prompt correctly identifies technical topics versus general concepts"
+  },
+  {
+    "prompt_inputs": {
+      "content": "Recent investigations into cognitive load theory have yielded interesting findings. Smith et al. (2019) examined working memory capacity in multilingual speakers, discovering a 23% improvement in task switching performance. Meanwhile, unrelated research by Johnson's team focused on bacterial antibiotic resistance mechanisms in hospital environments, identifying three novel resistance pathways in Staphylococcus aureus. Additionally, a 2020 meta-analysis synthesized 147 studies on climate change impacts on agricultural yields, concluding that temperature increases correlate with 12-18% crop productivity loss. Finally, emerging work by Chen and colleagues explores the intersection of machine learning algorithms and medical imaging diagnostics, demonstrating 94% accuracy in tumor detection. These disparate studies represent the breadth of contemporary scientific inquiry."
+    },
+    "solution_criteria": [
+      "Identifies all distinct research domains present in the passage without conflating unrelated studies",
+      "Produces a valid JSON array of strings containing topic labels",
+      "Extracts topics at an appropriate level of abstraction (neither too granular nor too broad)"
+    ],
+    "task_description": "\"\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\"\n    ",
+    "scenario": "Testing with a poorly formatted or ambiguous passage that discusses multiple unrelated studies to verify the prompt handles mixed content and produces a coherent topic list"
   }
 ]

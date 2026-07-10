@@ -113,7 +113,7 @@
             <div class="summary-stats">
                 <div class="stat-box">
                     <div>Total Test Cases</div>
-                    <div class="stat-value">1</div>
+                    <div class="stat-value">4</div>
                 </div>
                 <div class="stat-box">
                     <div>Average Score</div>
@@ -121,7 +121,7 @@
                 </div>
                 <div class="stat-box">
                     <div>Pass Rate (≥7)</div>
-                    <div class="stat-value">100.0%</div>
+                    <div class="stat-value">75.0%</div>
                 </div>
             </div>
         </div>
@@ -140,42 +140,121 @@
             <tbody>
     
             <tr>
-                <td>Testing with a professional endurance athlete (marathon runner) who has high caloric needs and specific carbohydrate-loading requirements for competition day</td>
-                <td class="prompt-inputs"><strong>height:</strong> 180 cm<br><strong>weight:</strong> 72 kg<br><strong>goal:</strong> Marathon competition day - carbohydrate loading with high caloric intake for endurance performance<br><strong>restrictions:</strong> None</td>
-                <td class="criteria">• Meal plan covers all meals for one full day with appropriate timing around competition<br>• Total daily calories and carbohydrate intake align with high endurance athlete needs<br>• Includes easily digestible, carbohydrate-rich foods suitable for competition day</td>
-                <td class="output"><pre># One-Day Marathon Competition Day Meal Plan
-
-Here is a one-day meal plan for an athlete preparing for marathon competition with carbohydrate loading and high caloric intake for endurance performance:
-
-* **Calorie Target:** Approximately 3,500 calories
-* **Macronutrient Breakdown:** Protein (130g), Fat (90g), Carbs (520g)
-
-## Meal Plan:
-
-* **Breakfast (6:30 AM):** Oatmeal (120g dry weight) with honey (40g), banana (150g), and whole milk (240g). Toast with jam (2 slices whole wheat bread, 60g total with 30g jam).
-    * Protein: 18g, Fat: 12g, Carbs: 130g
-
-* **Pre-Workout Snack (8:00 AM):** Sports drink (500ml) with energy bar (65g).
-    * Protein: 10g, Fat: 8g, Carbs: 75g
-
-* **Mid-Morning (10:00 AM):** Bagel (90g) with cream cheese (30g) and sliced turkey (60g). Orange juice (250ml).
-    * Protein: 20g, Fat: 12g, Carbs: 85g
-
-* **Lunch (1:00 PM):** Pasta with marinara sauce (200g cooked pasta, 150g sauce) and ground turkey (100g). Side salad with olive oil dressing (150g greens, 15ml oil).
-    * Protein: 35g, Fat: 18g, Carbs: 95g
-
-* **Afternoon Snack (3:30 PM):** Rice cakes (50g) with peanut butter (25g) and honey (20g). Apple (150g).
-    * Protein: 10g, Fat: 12g, Carbs: 75g
-
-* **Early Dinner (6:00 PM):** White rice (200g cooked) with grilled chicken breast (120g) and steamed carrots (150g). Dinner roll (40g) with butter (10g).
-    * Protein: 32g, Fat: 15g, Carbs: 95g
-
-* **Evening Snack (8:00 PM):** Banana (120g) with low-fat yogurt (200g) and granola (40g).
-    * Protein: 15g, Fat: 13g, Carbs: 65g
-
-This meal plan prioritizes easily digestible carbohydrates and moderate protein to maximize glycogen storage while maintaining energy levels for optimal marathon performance.</pre></td>
+                <td>Testing with an abstract from a humanities/social science article that uses implicit and nuanced language to assess topic extraction accuracy in non-technical domains</td>
+                <td class="prompt-inputs"><strong>content:</strong> This study examines the intersectionality of gender identity and socioeconomic mobility within post-industrial urban communities, drawing on narrative analysis of life histories collected over a fifteen-year longitudinal study. We argue that the neoliberal restructuring of labor markets has fundamentally altered the pathways through which individuals construct meaning around work and family obligations, particularly for women navigating precarious employment. Through thematic coding of participant interviews, we identify recurring tensions between aspirational narratives of self-determination and structural constraints imposed by childcare accessibility, wage stagnation, and the cultural valorization of emotional labor. Our findings suggest that agency itself becomes a contested terrain where individual choice intersects with systemic inequality, complicating traditional sociological frameworks that position structure and agency as discrete analytical categories.</td>
+                <td class="criteria">• Captures major conceptual themes including gender identity, socioeconomic mobility, neoliberalism, and labor markets<br>• Identifies methodological and analytical approaches such as narrative analysis and thematic coding<br>• Recognizes nuanced social phenomena like precarious employment, emotional labor, and the structure-agency relationship<br>• Avoids extracting overly specific details (e.g., 'fifteen-year longitudinal study') while capturing substantive topics</td>
+                <td class="output"><pre>```json
+[
+  "gender identity",
+  "socioeconomic mobility",
+  "post-industrial urban communities",
+  "narrative analysis",
+  "life histories",
+  "longitudinal study",
+  "neoliberal restructuring",
+  "labor markets",
+  "work and family obligations",
+  "precarious employment",
+  "thematic coding",
+  "self-determination",
+  "childcare accessibility",
+  "wage stagnation",
+  "emotional labor",
+  "agency",
+  "systemic inequality",
+  "structure and agency",
+  "sociological frameworks"
+]
+```</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution meets all mandatory requirements: it is a valid JSON array of strings containing topics extracted from the passage, with clean formatting and no extra commentary. Against the secondary criteria, it performs very well—capturing all major conceptual themes, methodological approaches, and nuanced phenomena. The inclusion of 'longitudinal study' represents a minor violation of the guidance to avoid overly specific methodological details, though 'narrative analysis' and 'thematic coding' are appropriately included as they represent analytical approaches rather than study design specifics. Overall, this is a high-quality extraction that demonstrates strong understanding of the passage's substantive content.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a passage containing overlapping and hierarchical topics to verify the prompt distinguishes between main topics and subtopics</td>
+                <td class="prompt-inputs"><strong>content:</strong> This study examines neuroplasticity mechanisms in adolescent brain development, with particular emphasis on synaptic pruning and myelination processes. Synaptic pruning, the elimination of unused neural connections, occurs predominantly in the prefrontal cortex and is regulated by microglial activity and neurotrophic factors. Concurrently, myelination—the insulation of axons by oligodendrocytes—accelerates white matter development and enhances neural transmission speed. Both processes are influenced by environmental factors including sleep quality, physical exercise, and cognitive stimulation. Furthermore, adolescent neuroplasticity differs fundamentally from adult neuroplasticity in its heightened sensitivity to experience-dependent modification, though the underlying molecular mechanisms involve shared signaling pathways such as BDNF and calcium-dependent gene expression.</td>
+                <td class="criteria">• Extracts main topics (neuroplasticity, synaptic pruning, myelination, environmental factors) as distinct entries<br>• Distinguishes between hierarchical levels (e.g., neuroplasticity as main topic with synaptic pruning and myelination as related but separate topics)<br>• Avoids excessive granularity by not listing every molecular detail (e.g., BDNF, microglial activity) as separate topics<br>• Returns results as a valid JSON array of strings</td>
+                <td class="output"><pre>```json
+[
+  "neuroplasticity mechanisms",
+  "adolescent brain development",
+  "synaptic pruning",
+  "myelination",
+  "prefrontal cortex",
+  "microglial activity",
+  "neurotrophic factors",
+  "axons",
+  "oligodendrocytes",
+  "white matter development",
+  "neural transmission",
+  "sleep quality",
+  "physical exercise",
+  "cognitive stimulation",
+  "experience-dependent modification",
+  "BDNF",
+  "calcium-dependent gene expression",
+  "molecular mechanisms",
+  "signaling pathways"
+]
+```</pre></td>
+                <td class="score-col"><span class="score score-medium">6</span></td>
+                <td class="reasoning">The solution meets all three mandatory requirements: it is a valid JSON array of strings with only topic names and no commentary. However, it significantly violates the secondary criteria regarding granularity and hierarchical distinction. The criteria explicitly state to 'avoid excessive granularity by not listing every molecular detail' and to 'distinguish between hierarchical levels.' The inclusion of BDNF, microglial activity, calcium-dependent gene expression, oligodendrocytes, and axons as separate entries contradicts this guidance. A better solution would consolidate these into broader categories or exclude them entirely, keeping only the main topics and environmental factors. The solution treats molecular mechanisms as equal-level topics rather than supporting details of the primary concepts.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a passage containing multiple domain-specific jargon terms and acronyms to evaluate whether the prompt correctly identifies technical topics versus general concepts</td>
+                <td class="prompt-inputs"><strong>content:</strong> Recent advances in CRISPR-Cas9 gene editing have revolutionized molecular biology research by enabling precise genomic modifications with unprecedented efficiency. The mechanism relies on RNA-guided nuclease activity to target specific DNA sequences, facilitating both insertional mutagenesis and homology-directed repair (HDR) pathways. Applications span from correcting monogenic disorders like cystic fibrosis to engineering CAR-T cells for immunotherapy. However, off-target effects and mosaicism remain critical challenges in translating these techniques to clinical practice. Epigenetic modifications through CRISPR interference (CRISPRi) and base editing represent emerging alternatives that circumvent permanent DNA alterations, offering greater therapeutic precision in treating polygenic diseases and cancer.</td>
+                <td class="criteria">• Correctly identifies domain-specific technical topics (CRISPR-Cas9, HDR, CAR-T cells, epigenetic modifications) separately from general concepts (advances, challenges, applications)<br>• Distinguishes acronyms and their expanded forms as single topics (e.g., CRISPR-Cas9, CRISPRi, HDR treated as technical topics, not separate from their descriptions)<br>• Captures both established methodologies and emerging techniques as distinct topics</td>
+                <td class="output"><pre>```json
+[
+  "CRISPR-Cas9 gene editing",
+  "molecular biology research",
+  "genomic modifications",
+  "RNA-guided nuclease activity",
+  "DNA sequences",
+  "insertional mutagenesis",
+  "homology-directed repair (HDR)",
+  "monogenic disorders",
+  "cystic fibrosis",
+  "CAR-T cells",
+  "immunotherapy",
+  "off-target effects",
+  "mosaicism",
+  "clinical practice",
+  "epigenetic modifications",
+  "CRISPR interference (CRISPRi)",
+  "base editing",
+  "polygenic diseases",
+  "cancer"
+]
+```</pre></td>
                 <td class="score-col"><span class="score score-high">8</span></td>
-                <td class="reasoning">The solution fully satisfies all three mandatory requirements with clear presentation of daily calories, macronutrient breakdown, and detailed meals with portions and timing. The carbohydrate-loading approach (520g carbs) is appropriate for marathon preparation. However, the solution has practical limitations: it doesn't specify when the marathon actually occurs (essential for real-world application), includes some foods that might cause GI issues during competition, and doesn't justify the caloric calculation. These are secondary criteria issues that prevent a perfect score, but the mandatory requirements are comprehensively met.</td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings containing topics from the article with no extra commentary. Regarding secondary criteria, it excellently distinguishes technical acronyms and their expanded forms as single topics (CRISPR-Cas9, CRISPRi, HDR) and captures both established and emerging methodologies distinctly. However, it includes some borderline entries that are more contextual or foundational concepts rather than substantive topics (molecular biology research, clinical practice, DNA sequences). These inclusions represent minor over-inclusivity rather than critical failures, as they are mentioned in the passage. The solution demonstrates strong topical extraction with appropriate granularity for most entries.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a poorly formatted or ambiguous passage that discusses multiple unrelated studies to verify the prompt handles mixed content and produces a coherent topic list</td>
+                <td class="prompt-inputs"><strong>content:</strong> Recent investigations into cognitive load theory have yielded interesting findings. Smith et al. (2019) examined working memory capacity in multilingual speakers, discovering a 23% improvement in task switching performance. Meanwhile, unrelated research by Johnson's team focused on bacterial antibiotic resistance mechanisms in hospital environments, identifying three novel resistance pathways in Staphylococcus aureus. Additionally, a 2020 meta-analysis synthesized 147 studies on climate change impacts on agricultural yields, concluding that temperature increases correlate with 12-18% crop productivity loss. Finally, emerging work by Chen and colleagues explores the intersection of machine learning algorithms and medical imaging diagnostics, demonstrating 94% accuracy in tumor detection. These disparate studies represent the breadth of contemporary scientific inquiry.</td>
+                <td class="criteria">• Identifies all distinct research domains present in the passage without conflating unrelated studies<br>• Produces a valid JSON array of strings containing topic labels<br>• Extracts topics at an appropriate level of abstraction (neither too granular nor too broad)</td>
+                <td class="output"><pre>```json
+[
+  "cognitive load theory",
+  "working memory capacity",
+  "multilingual speakers",
+  "task switching performance",
+  "bacterial antibiotic resistance",
+  "hospital environments",
+  "Staphylococcus aureus",
+  "climate change",
+  "agricultural yields",
+  "crop productivity",
+  "machine learning algorithms",
+  "medical imaging diagnostics",
+  "tumor detection"
+]
+```</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution meets all mandatory requirements: it contains a valid JSON array of strings with only topic labels and no extra commentary. It successfully identifies topics from all four research domains (cognitive load/working memory, bacterial resistance, climate change/agriculture, and machine learning/medical imaging) without conflating unrelated studies. The abstraction level is appropriate - topics like 'working memory capacity' and 'tumor detection' are neither overly specific nor too vague. The extraction is comprehensive and captures the breadth of the passage. Minor weaknesses include slight incompleteness in capturing all nuanced topic variations, but these do not violate mandatory requirements.</td>
             </tr>
         
             </tbody>
